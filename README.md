@@ -1,3 +1,27 @@
+## Build a RootFS !
+```
+git clone git://github.com/greguu/voidz-packages.git
+cd voidz-packages
+./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl binary-bootstrap
+./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl pkg zaurus-base
+cd ..
+git clone git://github.com/greguu/voidz-mklive.git
+cd voidz-mklive
+make
+sudo ./mkrootfs.sh -r ../voidz-packages/hostdir/binpkgs/armv5tel-musl armv5tel-musl
+```
+Note: The created rootfs does require some fixing and modifications to work properly!
+
+
+### Oustanding tasks and known issues: 
+
+- reboot halts the system and does not reboot
+- no binary package feed yet
+.
+.
+.
+
+
 ## The XBPS source packages collection
 
 This repository contains the XBPS source packages collection to build binary packages
