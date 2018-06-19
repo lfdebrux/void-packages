@@ -12,6 +12,7 @@ sudo ./mkrootfs.sh -r ../voidz-packages/hostdir/binpkgs/armv5tel-musl armv5tel-m
 ```
 Note: The created rootfs does require some fixing and modifications to work properly!
 
+Forum: https://www.oesf.org/forum/index.php?showtopic=34937
 
 ### Oustanding tasks and known issues: 
 
