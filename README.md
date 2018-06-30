@@ -12,12 +12,19 @@ sudo ./mkrootfs.sh -r ../voidz-packages/hostdir/binpkgs/armv5tel-musl armv5tel-m
 ```
 Note: The created rootfs does require some fixing and modifications to work properly!
 
+Enable the testing repo:
+
+```
+echo 'repository=https://www.oesf.org/repository/feeds/voidlinux/testing/build6' > /etc/xbps.d/00-repository-main.conf
+```
+
 Forum: https://www.oesf.org/forum/index.php?showtopic=34937
 
 ### Oustanding tasks and known issues: 
 
 - reboot halts the system and does not reboot
-- no binary package feed yet
+- lcd does stay on if lid closed
+- no Xorg so far
 .
 .
 .
@@ -74,7 +81,7 @@ executable must be `setgid`:
 
     # chown root:<group> xbps-uchroot
     # chmod 4750 xbps-uchroot
-    # usermod -a -G <group> <user>
+    # usermod -a -G <group> <user>'''
 
 > NOTE: by default in void you shouldn't do this manually, your user must be a member of
 the `xbuilder` group.
