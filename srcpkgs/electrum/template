@@ -5,9 +5,9 @@ revision=1
 noarch=yes
 wrksrc="Electrum-${version}"
 build_style=python3-module
-pycompile_module="electrum electrum_gui electrum_plugins"
+pycompile_module="electrum electrum_plugins"
 hostmakedepends="python3-setuptools"
-depends="python3-PyQt5 python3-dnspython python3-ecdsa python3-jsonrpclib
+depends="python3-dnspython python3-ecdsa python3-jsonrpclib
  python3-pbkdf2 python3-protobuf python3-pyaes python3-pycryptodome python3-pysocks
  python3-qrcode python3-requests"
 # Missing optional dependencies:
