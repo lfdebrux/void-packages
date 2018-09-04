@@ -6,8 +6,7 @@ lib32disabled=yes
 build_style=cmake
 configure_args="-DENABLE_MAN=ON -DENABLE_ENCHANT=ON -DPYTHON_EXECUTABLE=/usr/bin/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so"
 hostmakedepends="asciidoc libgcrypt-devel pkg-config python-devel tcl-devel"
-makedepends="enchant-devel gnutls-devel libcurl-devel lua-devel python-devel
- ruby-devel tcl-devel"
+makedepends="enchant-devel gnutls-devel libcurl-devel lua-devel python-devel"
 depends="ca-certificates"
 short_desc="Fast, light and extensible IRC client"
 maintainer="maxice8 <thinkabit.ukim@gmail.com>"
@@ -17,7 +16,7 @@ changelog="https://raw.githubusercontent.com/weechat/weechat/master/ChangeLog.ad
 distfiles="${homepage}/files/src/${pkgname}-${version}.tar.bz2"
 checksum=8f621d638dc93db27a7865b6c4a67c14376bbd33315579de3998f0e30e84965c
 
-subpackages="weechat-aspell weechat-devel weechat-ruby weechat-python weechat-tcl weechat-lua weechat-perl"
+subpackages="weechat-aspell weechat-devel weechat-python weechat-lua weechat-perl"
 
 if [ "$CROSS_BUILD" ]; then
 	_perlpath="${XBPS_CROSS_BASE}/usr/lib/perl5/core_perl/CORE"
