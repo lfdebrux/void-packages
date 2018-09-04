@@ -1,0 +1,18 @@
+--- linux-4.14.18/drivers/video/fbdev/core/fbmem.c	2018-02-08 08:12:26.000000000 +1300
++++ linux-4.14.18-fb/drivers/video/fbdev/core/fbmem.c	2018-06-01 17:29:54.666854465 +1200
+@@ -1100,6 +1100,15 @@
+ 	long ret = 0;
+ 
+ 	switch (cmd) {
++	
++	case FBIOGET_VRAM_START_ADDRESS:
++		ret = (unsigned long)info->screen_base;
++		break;
++
++	case FBIOGET_VRAM_END_ADDRESS:
++		ret = (unsigned long)info->screen_base + (1024 * 1024) + (1024 * 256);
++		break;
++	
+ 	case FBIOGET_VSCREENINFO:
+ 		if (!lock_fb_info(info))
+ 			return -ENODEV;

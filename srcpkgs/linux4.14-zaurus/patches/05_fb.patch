@@ -1,0 +1,12 @@
+--- linux-4.14.18/include/linux/fb.h	2018-02-08 08:12:26.000000000 +1300
++++ linux-4.14.18-fb/include/linux/fb.h	2018-06-01 17:37:23.280870686 +1200
+@@ -39,6 +39,9 @@
+ #define FB_DISP_MULTI		128
+ #define FB_DISP_UNKNOWN		256
+ 
++#define FBIOGET_VRAM_START_ADDRESS 0x4619
++#define FBIOGET_VRAM_END_ADDRESS 0x4620
++
+ #define FB_SIGNAL_NONE		0
+ #define FB_SIGNAL_BLANK_BLANK	1
+ #define FB_SIGNAL_SEPARATE	2

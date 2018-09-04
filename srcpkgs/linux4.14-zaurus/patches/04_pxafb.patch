@@ -1,0 +1,10 @@
+--- linux-4.14.18/drivers/video/fbdev/pxafb.h	2018-02-08 08:12:26.000000000 +1300
++++ linux-4.14.18-fb/drivers/video/fbdev/pxafb.h	2018-06-01 17:35:41.100722712 +1200
+@@ -199,4 +199,7 @@
+ #define MAX_XRES	1024
+ #define MAX_YRES	1024
+ 
++#define INTERNAL_SRAM_START	0x5c000000
++#define INTERNAL_SRAM_SIZE		0x00040000
++
+ #endif /* __PXAFB_H__ */
