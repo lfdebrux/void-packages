@@ -42,10 +42,3 @@ cmus-opus_package() {
 		vmove usr/lib/cmus/ip/opus.so
 	}
 }
-cmus-sndio_package() {
-	short_desc+=" - sndio output plugin"
-	depends="${sourcepkg}>=${version}_${revision}"
-	pkg_install() {
-		vmove usr/lib/cmus/op/sndio.so
-	}
-}
