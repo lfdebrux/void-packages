@@ -1,24 +1,15 @@
 # Template file for 'mpd'
 pkgname=mpd
 version=0.20.21
-revision=2
+revision=1
 build_style=gnu-configure
 configure_args="--enable-opus --enable-mikmod --enable-neighbor-plugins
- --enable-soundcloud --enable-pipe-output --disable-twolame-encoder
- --disable-sidplay --enable-bzip2 --enable-zzip $(vopt_enable jack)
- $(vopt_enable lame lame-encoder) $(vopt_enable mpcdec mpc)
- $(vopt_enable pulseaudio pulse) $(vopt_enable wavpack) $(vopt_enable cdio cdio-paranoia)
- $(vopt_enable libao ao) $(vopt_enable sndio sndio) --disable-systemd-daemon"
+ --disable-soundcloud --enable-pipe-output --disable-twolame-encoder
+ --disable-sidplay --enable-bzip2 --enable-zzip --disable-systemd-daemon"
 hostmakedepends="pkg-config"
-makedepends="avahi-glib-libs-devel boost-devel faad2-devel ffmpeg-devel
- libcurl-devel libid3tag-devel libmad-devel libmikmod-devel libmms-devel
- libmodplug-devel libmpdclient-devel libnfs-devel libsamplerate-devel
- libsoup-devel libupnp1.8-devel mpg123-devel opus-devel samba-devel yajl-devel
- zziplib-devel $(vopt_if cdio 'libcdio-paranoia-devel')
- $(vopt_if jack 'jack-devel') $(vopt_if lame 'lame-devel')
- $(vopt_if libao 'libao-devel') $(vopt_if mpcdec 'libmpcdec-devel')
- $(vopt_if pulseaudio 'pulseaudio-devel') $(vopt_if sndio 'sndio-devel')
- $(vopt_if wavpack 'wavpack-devel')"
+makedepends="boost-devel libcurl-devel libid3tag-devel libmad-devel libmikmod-devel libmms-devel
+ libmodplug-devel libmpdclient-devel libsamplerate-devel
+ opus-devel zziplib-devel"
 conf_files="/etc/mpd.conf"
 system_accounts="mpd"
 mpd_homedir="/var/lib/mpd"
@@ -28,11 +19,10 @@ license="GPL-2.0-or-later"
 homepage="https://www.musicpd.org/"
 distfiles="https://www.musicpd.org/download/mpd/${version%.*}/mpd-${version}.tar.xz"
 checksum=8322764dc265c20f05c8c8fdfdd578b0722e74626bef56fcd8eebfb01acc58dc
-
 # Package build options
-build_options="jack lame mpcdec pulseaudio libao wavpack sndio cdio"
-desc_option_cdio="Enable libcdio_paranoia input plugin"
-build_options_default="pulseaudio libao sndio cdio"
+build_options=""
+desc_option_cdio=""
+build_options_default=""
 
 pre_configure() {
 	sed -i '/^doc_DATA =/s,doc/mpdconf.example,,' Makefile.in
