@@ -13,7 +13,7 @@ homepage="https://www.vim.org"
 distfiles="https://github.com/vim/vim/archive/v${version}.tar.gz"
 checksum=90e1c20a2c07c76e1143b844414827fb64312f2e8c856bea2d6f73187a831994
 
-subpackages="xxd vim-common vim-x11 gvim"
+subpackages="xxd vim-common"
 # XXX vim-huge cannot be cross compiled for now.
 if [ -z "$CROSS_BUILD" ]; then
 	subpackages+=" vim-huge vim-huge-python3 gvim-huge"
@@ -99,5 +99,13 @@ vim-common_package() {
 		vmove usr/share/licenses
 		vmove usr/share/vim
 		vinstall ${FILESDIR}/vimrc 644 usr/share/vim
+	}
+}
+
+xxd_package() {
+	short_desc="Make a hexdump or do the reverse"
+	pkg_install() {
+		vmove usr/bin/xxd
+		vmove usr/share/man/man1/xxd.1
 	}
 }
