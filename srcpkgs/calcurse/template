@@ -9,7 +9,7 @@ maintainer="silvernode <mollusk@homebutter.com>"
 license="2-clause-BSD"
 homepage="http://calcurse.org"
 distfiles="http://calcurse.org/files/${pkgname}-${version}.tar.gz"
-checksum=31ecc3dc09e1e561502b4c94f965ed6b167c03e9418438c4a7ad5bad2c785f9a
+checksum=a222087acae9d7fae5a2d73e768227fa856c0f682ae0d185506ca3b81ac90087
 
 post_install() {
 	vlicense COPYING
