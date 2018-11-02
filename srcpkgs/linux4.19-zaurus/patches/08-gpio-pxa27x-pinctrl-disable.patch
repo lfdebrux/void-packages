@@ -1,0 +1,11 @@
+--- a/drivers/gpio/gpio-pxa_test.c	2018-10-22 19:37:37.000000000 +1300
++++ b/drivers/gpio/gpio-pxa.c	2018-10-31 13:17:02.208300675 +1300
+@@ -246,6 +246,8 @@
+ 	switch (gpio_type) {
+ 	case PXA3XX_GPIO:
+ 		return false;
++	case PXA27X_GPIO:
++		return false;
+ 
+ 	default:
+ 		return true;
