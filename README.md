@@ -5,7 +5,7 @@ Note: you will need to reinstall busybox-zaurus package first. Beware!!
 
 ```
 xbps-remove -F busybox-zaurus
-xbps-install busybox-zaurus
+xbps-install -S busybox-zaurus
 ```
 
 Then get the repo and load do a binary-boostrap.
