@@ -1,33 +1,15 @@
-## Build a RootFS !
+## Build a Native on armv5tel-musl !
+## EXPERIMENTAL !!!
 ```
 git clone git://github.com/greguu/voidz-packages.git
 cd voidz-packages
+git branch -a
+git checkout voidz-packages-v02-native-build 
+git branch
 ./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl binary-bootstrap
-./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl pkg zaurus-base
-cd ..
-git clone git://github.com/greguu/voidz-mklive.git
-cd voidz-mklive
-make
-sudo ./mkrootfs.sh -r ../voidz-packages/hostdir/binpkgs/armv5tel-musl armv5tel-musl
-```
-Note: The created rootfs does require some fixing and modifications to work properly!
-
-Enable the testing repo:
-
-```
-echo 'repository=https://www.oesf.org/repository/feeds/voidlinux/testing/build7' > /etc/xbps.d/00-repository-main.conf
-```
+./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl pkg <package-name>
 
 Forum: https://www.oesf.org/forum/index.php?showtopic=34937
-
-### Oustanding tasks and known issues: 
-
-- reboot halts the system and does not reboot
-- lcd does stay on if lid closed
-- no Xorg so far
-.
-.
-.
 
 
 ## The XBPS source packages collection
