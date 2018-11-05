@@ -1,0 +1,5 @@
+XBPS_TRIPLET="arm-linux-musleabi"
+XBPS_TARGET_CFLAGS="-march=armv5te -mtune=xscale -msoft-float -mfloat-abi=soft"
+XBPS_TARGET_CXXFLAGS="$XBPS_CROSS_CFLAGS"
+XBPS_CROSS_FFLAGS=""
+XBPS_TRIPLET="arm-linux-musleabi"
