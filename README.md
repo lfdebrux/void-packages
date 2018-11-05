@@ -8,7 +8,7 @@ xbps-remove -F busybox-zaurus
 xbps-install -S busybox-zaurus
 ```
 
-Then get the repo and load do a binary-boostrap.
+Then clone voidz-packages, switch branch and do a binary-boostrap.
 
 ```
 git clone git://github.com/greguu/voidz-packages.git
