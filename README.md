@@ -1,7 +1,7 @@
 ## Build a Native on armv5tel-musl !
 ## EXPERIMENTAL !!!
 
-Note: you will need to reinstall busybox-zaurus package first. Beware!!
+Note: you will need to reinstall busybox-zaurus package first to allow xz and gawk to be installed. Beware!! 
 
 ```
 xbps-remove -F busybox-zaurus
