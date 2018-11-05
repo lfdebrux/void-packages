@@ -18,9 +18,9 @@ git checkout voidz-packages-v02-native-build
 git branch
 ./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl binary-bootstrap
 ./xbps-src -m masterdir-armv5tel-musl -r armv5tel-musl pkg <package-name>
+```
 
 Forum: https://www.oesf.org/forum/index.php?showtopic=34937
-
 
 ## The XBPS source packages collection
 
