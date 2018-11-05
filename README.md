@@ -1,5 +1,15 @@
 ## Build a Native on armv5tel-musl !
 ## EXPERIMENTAL !!!
+
+Note: you will need to reinstall busybox-zaurus package first. Beware!!
+
+```
+xbps-remove -F busybox-zaurus
+xbps-install busybox-zaurus
+```
+
+Then get the repo and load do a binary-boostrap.
+
 ```
 git clone git://github.com/greguu/voidz-packages.git
 cd voidz-packages
@@ -7,7 +17,7 @@ git branch -a
 git checkout voidz-packages-v02-native-build 
 git branch
 ./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl binary-bootstrap
-./xbps-src -m masterdir-armv5tel-musl -a armv5tel-musl -r armv5tel-musl pkg <package-name>
+./xbps-src pkg <package-name>
 
 Forum: https://www.oesf.org/forum/index.php?showtopic=34937
 
