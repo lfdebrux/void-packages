@@ -270,7 +270,6 @@ tee:tee:/usr/bin/busybox
 test:test:/usr/bin/busybox
 time:time:/usr/bin/busybox
 timeout:timeout:/usr/bin/busybox
-top:top:/usr/bin/busybox
 touch:touch:/usr/bin/busybox
 tr:tr:/usr/bin/busybox
 traceroute:traceroute:/usr/bin/busybox
