@@ -7,6 +7,10 @@ Note: you will need to reinstall busybox-zaurus package first to allow xz and ga
 xbps-remove -F busybox-zaurus
 xbps-install -S busybox-zaurus
 ```
+Note: Check that busybox did not relink /sbin/init and that it still points to runit. Reinstall runit just in case.
+```
+xbps-install -f runit runit-void
+```
 
 Then clone voidz-packages, switch branch and do a binary-boostrap.
 
