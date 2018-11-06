@@ -7,9 +7,12 @@ Note: you will need to reinstall busybox-zaurus package first to allow xz and ga
 xbps-remove -F busybox-zaurus
 xbps-install -S busybox-zaurus
 ```
-Note: Check that busybox did not relink /sbin/init and that it still points to runit. Reinstall runit just in case.
+Note: Check that busybox did not relink /sbin/init and that it still points to runit. Reinstall runit just in case as well as kbd and procps-ng to ensure that these binaries provided are not linking to busybox are up to date.
+
 ```
 xbps-install -f runit runit-void
+xbps-install -f kbd
+xbps-install -f procps-ng
 ```
 
 Then clone voidz-packages, switch branch and do a binary-boostrap.
