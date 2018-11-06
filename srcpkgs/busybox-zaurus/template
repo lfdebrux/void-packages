@@ -15,10 +15,10 @@ wrksrc=busybox-$version
 register_shell="/bin/sh"
 conflicts="busybox>=0 busybox-static>=0 base-system>=0 base-voidstrap>=0"
 
-_FEATURES="acpid coreutils cpio dash diffutils dosfstools findutils awk
+_FEATURES="acpid coreutils cpio dash diffutils dosfstools findutils
         grep gzip hdparm ifenslave iproute2 iputils less lsof netcat nvi
         patch powertop psmisc rfkill run-parts sed tar
-        traceroute util-linux which whois xz ncurses"
+        traceroute util-linux which whois ncurses"
 
 for f in ${_FEATURES}; do
         provides+=" ${f}-${version}_${revision}"
@@ -106,7 +106,6 @@ find:find:/usr/bin/busybox
 findfs:findfs:/usr/bin/busybox
 flock:flock:/usr/bin/busybox
 fold:fold:/usr/bin/busybox
-free:free:/usr/bin/busybox
 fsck:fsck:/usr/bin/busybox
 fstrim:fstrim:/usr/bin/busybox
 fsync:fsync:/usr/bin/busybox
@@ -129,7 +128,6 @@ ifconfig:ifconfig:/usr/bin/busybox
 ifdown:ifdown:/usr/bin/busybox
 ifenslave:ifenslave:/usr/bin/busybox
 ifup:ifup:/usr/bin/busybox
-init:init:/usr/bin/busybox
 inotifyd:inotifyd:/usr/bin/busybox
 insmod:insmod:/usr/bin/busybox
 install:install:/usr/bin/busybox
@@ -210,21 +208,15 @@ partprobe:partprobe:/usr/bin/busybox
 passwd:passwd:/usr/bin/busybox
 paste:paste:/usr/bin/busybox
 patch:patch:/usr/bin/busybox
-pgrep:pgrep:/usr/bin/busybox
-pidof:pidof:/usr/bin/busybox
 ping:ping:/usr/bin/busybox
 ping6:ping6:/usr/bin/busybox
 pipe_progress:pipe_progress:/usr/bin/busybox
-pkill:pkill:/usr/bin/busybox
-pmap:pmap:/usr/bin/busybox
 powertop:powertop:/usr/bin/busybox
 printenv:printenv:/usr/bin/busybox
 printf:printf:/usr/bin/busybox
-ps:ps:/usr/bin/busybox
 pscan:pscan:/usr/bin/busybox
 pstree:pstree:/usr/bin/busybox
 pwd:pwd:/usr/bin/busybox
-pwdx:pwdx:/usr/bin/busybox
 raidautorun:raidautorun:/usr/bin/busybox
 rdate:rdate:/usr/bin/busybox
 rdev:rdev:/usr/bin/busybox
@@ -277,7 +269,6 @@ swapoff:swapoff:/usr/bin/busybox
 swapon:swapon:/usr/bin/busybox
 switch_root:switch_root:/usr/bin/busybox
 sync:sync:/usr/bin/busybox
-sysctl:sysctl:/usr/bin/busybox
 syslogd:syslogd:/usr/bin/busybox
 tac:tac:/usr/bin/busybox
 tail:tail:/usr/bin/busybox
@@ -310,7 +301,6 @@ unlzop:unlzop:/usr/bin/busybox
 unshare:unshare:/usr/bin/busybox
 unxz:unxz:/usr/bin/busybox
 unzip:unzip:/usr/bin/busybox
-uptime:uptime:/usr/bin/busybox
 usleep:usleep:/usr/bin/busybox
 uudecode:uudecode:/usr/bin/busybox
 uuencode:uuencode:/usr/bin/busybox
