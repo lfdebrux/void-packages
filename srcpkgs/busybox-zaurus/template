@@ -57,7 +57,6 @@ chmod:chmod:/usr/bin/busybox
 chown:chown:/usr/bin/busybox
 chpasswd:chpasswd:/usr/bin/busybox
 chroot:chroot:/usr/bin/busybox
-chvt:chvt:/usr/bin/busybox
 cksum:cksum:/usr/bin/busybox
 clear:clear:/usr/bin/busybox
 cmp:cmp:/usr/bin/busybox
@@ -72,7 +71,6 @@ cut:cut:/usr/bin/busybox
 date:date:/usr/bin/busybox
 dc:dc:/usr/bin/busybox
 dd:dd:/usr/bin/busybox
-deallocvt:deallocvt:/usr/bin/busybox
 delgroup:delgroup:/usr/bin/busybox
 deluser:deluser:/usr/bin/busybox
 depmod:depmod:/usr/bin/busybox
@@ -143,7 +141,6 @@ ipneigh:ipneigh:/usr/bin/busybox
 iproute:iproute:/usr/bin/busybox
 iprule:iprule:/usr/bin/busybox
 iptunnel:iptunnel:/usr/bin/busybox
-kbd_mode:kbd_mode:/usr/bin/busybox
 kill:kill:/usr/bin/busybox
 killall:killall:/usr/bin/busybox
 killall5:killall5:/usr/bin/busybox
@@ -203,7 +200,6 @@ nslookup:nslookup:/usr/bin/busybox
 ntpd:ntpd:/usr/bin/busybox
 ntpd:ntpd:/etc/sv/busybox-ntpd
 od:od:/usr/bin/busybox
-openvt:openvt:/usr/bin/busybox
 partprobe:partprobe:/usr/bin/busybox
 passwd:passwd:/usr/bin/busybox
 paste:paste:/usr/bin/busybox
@@ -240,8 +236,6 @@ sed:sed:/usr/bin/busybox
 sendmail:sendmail:/usr/bin/busybox
 seq:seq:/usr/bin/busybox
 setconsole:setconsole:/usr/bin/busybox
-setfont:setfont:/usr/bin/busybox
-setkeycodes:setkeycodes:/usr/bin/busybox
 setlogcons:setlogcons:/usr/bin/busybox
 setpriv:setpriv:/usr/bin/busybox
 setserial:setserial:/usr/bin/busybox
@@ -251,7 +245,6 @@ sha1sum:sha1sum:/usr/bin/busybox
 sha256sum:sha256sum:/usr/bin/busybox
 sha3sum:sha3sum:/usr/bin/busybox
 sha512sum:sha512sum:/usr/bin/busybox
-showkey:showkey:/usr/bin/busybox
 shred:shred:/usr/bin/busybox
 shuf:shuf:/usr/bin/busybox
 slattach:slattach:/usr/bin/busybox
@@ -306,7 +299,6 @@ uudecode:uudecode:/usr/bin/busybox
 uuencode:uuencode:/usr/bin/busybox
 vconfig:vconfig:/usr/bin/busybox
 vi:vi:/usr/bin/busybox
-vlock:vlock:/usr/bin/busybox
 volname:volname:/usr/bin/busybox
 watch:watch:/usr/bin/busybox
 watchdog:watchdog:/usr/bin/busybox
